@@ -1,0 +1,9 @@
+.add-offer form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto
+}
+.add-offer form input, .add-offer form textarea {
+    margin: 5px;
+}

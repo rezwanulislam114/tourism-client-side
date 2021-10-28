@@ -5,8 +5,8 @@ import firebaseInitialize from "../pages/Authentication/Firebase/firebase.init";
 const useFirebase = () => {
     firebaseInitialize();
 
-    const [user, setUser] = useState();
-    const [error, setError] = useState();
+    const [user, setUser] = useState({});
+    const [error, setError] = useState('');
 
     const auth = getAuth();
 
@@ -24,7 +24,8 @@ const useFirebase = () => {
             setUser(user)
         }
         else {
-            setUser({})
+            // setUser({})
+            // logout done
         }
     })
 

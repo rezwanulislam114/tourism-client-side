@@ -7,10 +7,9 @@ const Login = () => {
         googleLogin()
     }
     return (
-        <div>
+        <div className="text-center">
             <h1>Login</h1>
-            <button onClick={handleGoogleLogin}>login with google</button>
-            <h2>{user?.displayName}</h2>
+            <button className="btn btn-danger" onClick={handleGoogleLogin}>login with google</button>
         </div>
     );
 };
