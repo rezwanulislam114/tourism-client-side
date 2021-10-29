@@ -14,7 +14,9 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className="header-navbar">
-                <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">
+                    <h3><span className="text-danger">Yo!</span>Getaway</h3>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

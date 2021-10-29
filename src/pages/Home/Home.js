@@ -18,8 +18,8 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h1>Iceland</h1>
+                        <p>Iceland, a Nordic island nation, is defined by its dramatic landscape</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -30,8 +30,8 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1>Maldives</h1>
+                        <p>Maldives, officially the Republic of Maldives, is an archipelagic state in the Indian subcontinent of Asia</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -42,8 +42,8 @@ const Home = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h1>St. Martin's</h1>
+                        <p>St. Martin's Island is a small island in the northeastern part of the Bay of Bengal</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
