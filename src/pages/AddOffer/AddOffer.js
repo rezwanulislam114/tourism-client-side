@@ -7,7 +7,7 @@ const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/offers', data)
+        axios.post('http://dry-fjord-96856.herokuapp.com/offers', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('This Offer Successfully Added');

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ManageServices = () => {
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/offers')
+        fetch('http://dry-fjord-96856.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => setOffers(data));
     }, [])
@@ -11,7 +11,7 @@ const ManageServices = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this offer?');
         if (confirmation) {
-            const url = `http://localhost:5000/offers/${id}`;
+            const url = `http://dry-fjord-96856.herokuapp.com/offers/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
