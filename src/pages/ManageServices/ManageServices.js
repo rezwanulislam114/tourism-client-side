@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './ManageServices.css'
 
 const ManageServices = () => {
     const [offers, setOffers] = useState([]);
@@ -11,7 +12,7 @@ const ManageServices = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Do you want to delete this offer?');
         if (confirmation) {
-            const url = `http://dry-fjord-96856.herokuapp.com/offers/${id}`;
+            const url = `https://dry-fjord-96856.herokuapp.com/offers/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
@@ -27,12 +28,14 @@ const ManageServices = () => {
     }
 
     return (
-        <div>
+        <div className="offers-manage">
+            <h1 className="title-text">Manage Offers</h1>
+            <p className="text-center text-danger mt-3 mb-5"><i>HERE YOU CAN DELETE YOUR OFFER WHICH IS NOT AVAILABLE RIGHT NOW</i></p>
             {
                 offers.map(offer => <div key={offer._id}>
-                    <div className="d-flex">
-                        <h3>{offer.name}</h3>
-                        <button onClick={() => handleDelete(offer._id)}>Delete</button>
+                    <div className="d-flex justify-content-between m-3 border-bottom">
+                        <h5>{offer.name}</h5>
+                        <button className="btn btn-danger mb-2" onClick={() => handleDelete(offer._id)}>Delete</button>
                     </div>
                 </div>)
             }
