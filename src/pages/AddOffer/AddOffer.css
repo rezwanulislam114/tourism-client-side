@@ -5,5 +5,15 @@
     margin: auto
 }
 .add-offer form input, .add-offer form textarea {
-    margin: 5px;
+    margin: 15px 0;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid red;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .add-offer form {
+        width: 95%;
+    }
 }

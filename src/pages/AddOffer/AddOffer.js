@@ -20,11 +20,13 @@ const AddOffer = () => {
     };
     return (
         <div className="add-offer">
-            <h1 className="text-center">Add New Offer</h1>
+            <h1 className="title-text">Add New Offer</h1>
+            <p className="text-center text-danger mt-3 mb-5"><i>ADD NEW OFFER FOR TO IMPRESS VISITOR AND GROW YOUR BUSINESS</i></p>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder="Offer Name" {...register("name")} />
                 <textarea placeholder="Offer Description" {...register("description")} />
                 <input placeholder="Offer Price" type="number" {...register("price")} />
+                <input placeholder="Pakage Days" type="number" {...register("days")} />
                 <input placeholder="Image Link" {...register("img")} />
                 <input className="btn btn-danger" type="submit" />
             </form>
