@@ -42,3 +42,12 @@
     font-size: 50px;
     margin: 0 0 20px;
 }
+
+@media only screen and (max-width: 768px) {
+    .about-us-container {
+        grid-template-columns: 1fr;
+    }
+    .reviews {
+        width: 100%;
+    }
+}

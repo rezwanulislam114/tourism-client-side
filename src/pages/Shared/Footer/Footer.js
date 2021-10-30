@@ -30,7 +30,7 @@ const Footer = () => {
                             <Link to="/">Privacy Policy</Link>
                         </div>
                     </Col>
-                    <Col xs={12} md={3}>
+                    <Col xs={12} md={3} className="newsletter">
                         <h4 className="text-secondary mb-4">Newsletter</h4>
                         <input type="text" />
                         <button className="btn btn-danger">Subscribe</button>

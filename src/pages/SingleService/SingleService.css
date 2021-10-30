@@ -1,0 +1,15 @@
+.offer-detail-img {
+    width: 420px;
+    height: 280px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .offer-detail-img {
+        max-width: 98%;
+        max-height: 230px;
+        margin-top: 20px;
+    }
+}
