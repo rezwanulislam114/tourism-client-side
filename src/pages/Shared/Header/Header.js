@@ -15,17 +15,17 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className="header-navbar">
                 <Navbar.Brand as={Link} to="/">
-                    <h3><span className="text-danger">Yo!</span>Getaway</h3>
+                    <h3><span className="text-danger">Yo!</span>Getaway.</h3>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={NavLink} to="/home" activeStyle={activeStyle}>Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/manage-services" activeStyle={activeStyle}>Manage Offers</Nav.Link>
                         {
                             user?.email ?
                                 <>
                                     <Nav.Link as={NavLink} to="/add-offer" activeStyle={activeStyle}>Add Offer</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/manage-services" activeStyle={activeStyle}>Manage Offers</Nav.Link>
                                 </> :
                                 ''
                         }
