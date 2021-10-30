@@ -7,7 +7,7 @@ const SingleService = () => {
     const { id } = useParams()
     const [offer, setOffer] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/offers/${id}`
+        const url = `https://dry-fjord-96856.herokuapp.com/offers/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setOffer(data));
