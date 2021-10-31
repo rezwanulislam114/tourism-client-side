@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const Cart = () => {
     const [carts, setCarts] = useState([]);
     const { user } = useAuth();
-    // const email = user.email;
-    // const { id } = useParams();
+    const email = user.email;
 
     useEffect(() => {
-        fetch(`https://dry-fjord-96856.herokuapp.com/cart`)
+        fetch(`https://dry-fjord-96856.herokuapp.com/${email}`)
             .then(res => res.json())
-            .then(data => setCarts(data))
+            .then(data => {
+                setCarts(data)
+                console.log(data)
+            })
     }, [])
 
     // const handleRemove = (id) => {
-    //     fetch(`https://localhost:5000/cart/${email}/${id}`, {
+    //     // console.log(id)
+    //     fetch(`http://localhost:5000/cart/${id}`, {
     //         method: 'DELETE'
     //     })
     //         .then(res => res.json())
@@ -26,22 +28,21 @@ const Cart = () => {
     // }
 
     const handleRemove = id => {
-        // const confirmation = window.confirm('Do you want to delete this offer?');
-        // if (confirmation) {
-        const url = `https://dry-fjord-96856.herokuapp.com/cart/${id}`;
-        fetch(url, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(data => {
-                // if (data.deletedCount > 0) {
-                //     alert('Your offer deleted successfully.')
-                //     const remaining = carts.filter(offer => offer._id !== id)
-                //     setCarts(remaining)
-                // }
-                console.log(data)
+        const confirmation = window.confirm('Do you want to delete this offer?');
+        if (confirmation) {
+            const url = `https://dry-fjord-96856.herokuapp.com/${id}`;
+            fetch(url, {
+                method: "DELETE"
             })
-        // }
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Your offer deleted successfully.')
+                        const remaining = carts.filter(offer => offer._id !== id)
+                        setCarts(remaining)
+                    }
+                })
+        }
     }
 
     return (
