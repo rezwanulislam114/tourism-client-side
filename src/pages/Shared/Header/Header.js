@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -6,10 +6,20 @@ import './Header.css'
 
 const Header = () => {
     const { user, logout } = useAuth()
+    const [carts, setCarts] = useState(null);
+    const email = user.email;
     const activeStyle = {
         borderBottom: '3px solid white',
         color: 'white'
     }
+    useEffect(() => {
+        fetch(`https://dry-fjord-96856.herokuapp.com/cart/${email}`)
+            .then(res => res.json())
+            .then(async data => {
+                setCarts(data)
+                console.log(data?.length)
+            })
+    }, [])
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -26,7 +36,7 @@ const Header = () => {
                                 <>
                                     <Nav.Link as={NavLink} to="/add-offer" activeStyle={activeStyle}>Add Offer</Nav.Link>
                                     <Nav.Link as={NavLink} to="/manage-services" activeStyle={activeStyle}>Manage Offers</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/cart" activeStyle={activeStyle}>Cart</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/cart" activeStyle={activeStyle}>Cart {carts?.length}</Nav.Link>
                                 </> :
                                 ''
                         }
