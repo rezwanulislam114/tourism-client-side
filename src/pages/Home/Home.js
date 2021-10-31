@@ -64,21 +64,21 @@ const Home = () => {
                     <div className="about-us-container">
                         <div className="single-about">
                             <div className="icon">
-                                <i class="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
                             </div>
                             <h3>Handpicked Hotels</h3>
                             <p>Here you can easily book a hotels. You find many hotels and book any one as your wish list. And all hotels are up to mark.</p>
                         </div>
                         <div className="single-about">
                             <div className="icon">
-                                <i class="fas fa-globe-americas"></i>
+                                <i className="fas fa-globe-americas"></i>
                             </div>
                             <h3>World Class Service</h3>
                             <p>Here you get world class service. You find your most comfort here. You dont need anything to do. Our stuf will do everything for you.</p>
                         </div>
                         <div className="single-about">
                             <div className="icon">
-                                <i class="fas fa-thumbs-up"></i>
+                                <i className="fas fa-thumbs-up"></i>
                             </div>
                             <h3>Best Price Guarantee</h3>
                             <p>We can ensure you that you will get most reasonable cost here. In the city we are only one who provide this world class services in this price range.</p>

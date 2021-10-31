@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './AuthProvider/AuthProvider';
 import AddOffer from './pages/AddOffer/AddOffer';
 import Login from './pages/Authentication/Login/Login';
+import Cart from './pages/Cart/Cart';
 import Home from './pages/Home/Home';
 import ManageServices from './pages/ManageServices/ManageServices';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
@@ -30,6 +31,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/manage-services">
             <ManageServices></ManageServices>
+          </PrivateRoute>
+          <PrivateRoute path="/cart">
+            <Cart></Cart>
           </PrivateRoute>
           <PrivateRoute path="/offer/:id">
             <SingleService></SingleService>
