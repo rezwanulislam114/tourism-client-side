@@ -19,6 +19,9 @@ const SingleService = () => {
     const handleAddToCart = () => {
         const data = offer;
         data.email = `${user.email}`;
+        delete data._id;
+        data._id = `${Math.random() * 10000000000}`;
+        console.log(data)
 
         fetch('https://dry-fjord-96856.herokuapp.com/cart', {
             method: 'POST',
