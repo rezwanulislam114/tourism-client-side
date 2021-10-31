@@ -8,7 +8,7 @@ const Cart = () => {
     const email = user.email;
 
     useEffect(() => {
-        fetch(`https://dry-fjord-96856.herokuapp.com/${email}`)
+        fetch(`https://dry-fjord-96856.herokuapp.com/cart/${email}`)
             .then(res => res.json())
             .then(data => {
                 setCarts(data)
@@ -30,7 +30,7 @@ const Cart = () => {
     const handleRemove = id => {
         const confirmation = window.confirm('Do you want to delete this offer?');
         if (confirmation) {
-            const url = `https://dry-fjord-96856.herokuapp.com/${id}`;
+            const url = `https://dry-fjord-96856.herokuapp.com/cart/${id}`;
             fetch(url, {
                 method: "DELETE"
             })
